@@ -35,7 +35,7 @@ for number in range (1, nr_numbers + 1):
 random.shuffle(password_List)
 #print(password_List)
 
-# Connecting my list password and converting into single string
+# Connecting my list and converting into single string
 password = " "
 for i in password_List:
     password += i
