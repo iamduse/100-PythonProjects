@@ -1,14 +1,14 @@
-#import random
-import  hangman_words
-import  hangman_art
+import random
+import  hangmanArt as Art
+import  hagmanWords as Words
 
 # TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
-word_list = hangman_words.word_list
+word_list = Words.word_list
 lives = 6
 
 # TODO-3: - Import the logo from hangman_art.py and print it at the start of the game.
-print(hangman_art.logo)
-chosen_word = random.choice(word_list)
+print(Art.logo)
+chosen_word = random.choice(Words.word_list)
 print(chosen_word)
 
 placeholder = ""
@@ -63,4 +63,4 @@ while not game_over:
         print("****************************YOU WIN****************************")
 
     # TODO-2: - Update the code below to use the stages List from the file hangman_art.py
-    print(hangman_art.stages[lives])
+    print(Art.stages[lives])
