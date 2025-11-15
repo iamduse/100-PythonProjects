@@ -1,5 +1,3 @@
-from operator import index
-
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
@@ -19,12 +17,14 @@ def caesar(original_text, shift_amount, encode_or_decode):
         shift_amount *= -1 # in maths if you multiply a number by -1 it will reverse sign + to -
             # so if the user chooses decode we will get - shift_amount in line 22 of our code
 
-    user_text = " "
+    user_text = ""
     for each in original_text:
-        shifted_position = alphabet.index(each) + shift_amount
-        shifted_position = shifted_position % len(alphabet)
-        user_text += alphabet[shifted_position]
-
+        if each in alphabet:
+            shifted_position = alphabet.index(each) + shift_amount
+            shifted_position = shifted_position % len(alphabet)
+            user_text += alphabet[shifted_position]
+        else:
+            user_text = user_text + each
     print(f"your result is :{user_text}")
 
 caesar(encode_or_decode= direction, shift_amount=shift,original_text = text)
