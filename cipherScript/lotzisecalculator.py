@@ -1,16 +1,10 @@
 #THIS IS THE FOREX PIP VALUE MEASUREMENT
 pip_value = 10
 
-stop_loss = float(input("QOR STOP LOSS LEVEL KAAGA: "))
-take_profit = float(input("QOR TAKE PROFIT LEVEL KAAGA: "))
-risk_money = float(input("GELI LACAGTA AAD RISK GARAYNAY: $"))
-
 def find_perfect_lot_size():
     """This function calculates the perfect lot size to your position according to your risk amount """
     lot_size = round(risk_money / (stop_loss * pip_value),2)
     TP = take_profit * lot_size * pip_value
-
-
 
    #totalrisk = lot_size * stop_loss * pip_value
     print("**********************")
@@ -19,4 +13,23 @@ def find_perfect_lot_size():
     print(f"Your expected TP is ${TP}\nGood luck")
     print("**********************")
 
-find_perfect_lot_size()
+
+restart = True
+while restart:
+    print("LOT SIZE CALCULATOR FOR CFD MARKETS: ")
+    stop_loss = float(input("ENTER YOUR STOP LOSS PIPS: "))
+    risk_money = float(input("ENTER YOUR RISK DOLLAR AMOUNT:$"))
+    take_profit = float(input("ENTER YOUR TARGET PIPS: "))
+    find_perfect_lot_size()
+
+    should_restart = input("Do you want to calculate another pair, type 'Y' for yes 'N' for No; ").lower()
+    if should_restart == "n":
+        print("GOOD LUCK, YOU GOT THIS!")
+        restart = False
+
+
+
+
+
+
+
