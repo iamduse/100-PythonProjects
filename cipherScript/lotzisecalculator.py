@@ -3,8 +3,10 @@ pip_value = 10
 
 def find_perfect_lot_size():
     """This function calculates the perfect lot size to your position according to your risk amount """
-    lot_size = round(risk_money / (stop_loss * pip_value),2)
-    TP = take_profit * lot_size * pip_value
+    row_lot_size = risk_money / (stop_loss *pip_value)
+    lot_size = round(row_lot_size,2)
+    TP = take_profit * row_lot_size * pip_value
+
 
    #totalrisk = lot_size * stop_loss * pip_value
     print("**********************")
