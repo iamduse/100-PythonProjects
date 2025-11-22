@@ -5,9 +5,9 @@ import random
 def format_data(account):
     """Takes the account data and returns the printable format."""
     account_name = account["name"]
-    account_desc = account["description"]
+    account_descr = account["description"]
     account_country = account["country"]
-    return f"{account_name}, a {account_desc}, from {account_country}"
+    return f"{account_name}, a {account_descr}, from {account_country}"
 
 
 def check_answer(user_guess, a_followers, b_followers):
