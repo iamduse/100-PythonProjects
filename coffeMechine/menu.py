@@ -29,11 +29,5 @@ resources = {
     "milk": 200,
     "coffee": 100,
 }
-def menu_function():
-    print("*************")
-    print(" MENU ")
-    print(f"1.Espresso: cost: $1 ")
-    print(f"2.Latte: cost: $1.5 ")
-    print(f"3.Cappuccino: cost: $1 ")
-    return
+
 
