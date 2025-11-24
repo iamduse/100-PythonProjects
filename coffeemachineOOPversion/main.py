@@ -15,7 +15,7 @@ turn_on = True
 while turn_on:
     options = menu.get_items()
     choice = input(f"What would you like? {options}: ")
-    if choice == "of":
+    if choice == "off":
         turn_on = False
     elif choice == "report":
         coffee.report()
