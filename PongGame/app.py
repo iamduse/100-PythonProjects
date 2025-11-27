@@ -33,7 +33,7 @@ screen.onkey(left_stick.down,"w")
 game_on = True
 while game_on:
     screen.update() # updates the screen after turtle is created
-    time.sleep(0.1)
+    time.sleep(ball.ball_move_speed)
     ball.ball_movement()
 
 

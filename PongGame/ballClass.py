@@ -8,6 +8,7 @@ class TheBall(Turtle ):
         self.penup()
         self.x_direction_move = 10
         self.y_direction_move = 10
+        self.ball_move_speed = 0.1
 
     def ball_movement(self):
         # Move the ball using its velocity
@@ -23,12 +24,11 @@ class TheBall(Turtle ):
     def bounce_x_axis(self):
         self.x_direction_move *= -1
         #Increase ball speed after it touches to the stick or paddle
-        # self.x_direction_move *= 1.1
+        self.ball_move_speed *= 0.9
 
     def bounce_y_axis(self):
         self.y_direction_move *= -1
-        # Increase ball speed after it touches to the stick or paddle
-        # self.y_direction_move *= 1.1
+
 
 
     def gave_over(self):
@@ -38,6 +38,7 @@ class TheBall(Turtle ):
     def refresh_the_ball(self):
         self.goto(0,0)
         self.bounce_x_axis()
+        self.ball_move_speed = 0.1
 
 
 
