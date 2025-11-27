@@ -8,15 +8,11 @@ class Stick(Turtle):
         self.create_stick()
         self.goto(position)
 
-
     def create_stick(self):
         self.shape("square")
         self.shapesize(stretch_wid=5, stretch_len=1)
         self.color("white")
         self.penup()
-
-
-
 
     def up(self):
         y_cor = self.ycor() + 20

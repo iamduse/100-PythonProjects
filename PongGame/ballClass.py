@@ -16,7 +16,6 @@ class TheBall(Turtle ):
         new_y = self.ycor() + self.y_direction_move
         self.goto(new_x, new_y)
 
-
         # Detect Top and bottom wall collision and make bounce
         if self.ycor() > 290 or self.ycor()< -280:
                 self.y_direction_move *= -1
@@ -28,8 +27,6 @@ class TheBall(Turtle ):
 
     def bounce_y_axis(self):
         self.y_direction_move *= -1
-
-
 
     def gave_over(self):
         self.write("GAME OVER", align="center", font= ("Arial", 24, "normal"))
