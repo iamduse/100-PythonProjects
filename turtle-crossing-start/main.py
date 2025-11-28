@@ -33,7 +33,7 @@ while game_is_on:
     for car in cars.all_cars:
         if car.distance(player) < 20:
             game_is_on = False
-            player.gave_over()
+            score.gave_over()
 
 # Detect if car reaches the finish line and restart the game level
     # also speed up the cars with each level and count the score

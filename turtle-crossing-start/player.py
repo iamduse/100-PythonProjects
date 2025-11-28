@@ -27,8 +27,7 @@ class Player(Turtle):
     def start_new_level(self):
         return self.goto(STARTING_POSITION)
 
-    def gave_over(self):
-        self.write("GAME OVER", align="center", font= ("arial" ,24 , "normal"))
+
 
 
 
