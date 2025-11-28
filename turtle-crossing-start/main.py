@@ -12,6 +12,8 @@ player = Player()
 cars = CarManager()
 
 
+
+
 screen.listen()
 screen.onkeypress(player.move_turtle, "Up")
 
@@ -19,7 +21,21 @@ game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
+    cars.create_car()
+    cars.move_cars()
 
+
+
+# Detect Collision the car and the turtle
+    for car in cars.all_cars:
+        if car.distance(player) < 20:
+            game_is_on = False
+            player.gave_over()
+
+# Detect if car reaches the finish line and restart the game level
+    # also speed up the cars with each level and count the score
+    if player.is_at_finish_line():
+        player.start_new_level()
 
 
 
