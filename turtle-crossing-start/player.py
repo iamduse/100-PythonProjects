@@ -13,7 +13,7 @@ class Player(Turtle):
 
     def create_turtle(self):
         self.shape("turtle")
-        self.color("red")
+        self.color("white")
         self.penup()
         self.setheading(90)
         self.goto(STARTING_POSITION)

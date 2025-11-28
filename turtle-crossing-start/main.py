@@ -7,9 +7,12 @@ from scoreboard import Scoreboard
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
+screen.bgpic("car.gif")
+screen.title("car crossing game")
 
 player = Player()
 cars = CarManager()
+score = Scoreboard()
 
 
 
@@ -36,6 +39,9 @@ while game_is_on:
     # also speed up the cars with each level and count the score
     if player.is_at_finish_line():
         player.start_new_level()
+        cars.speed_up()
+        score.increase_level()
+
 
 
 
